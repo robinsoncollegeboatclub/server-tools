@@ -1,13 +1,14 @@
 {
   "name": "server-tools",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Command line utility for administering the Robinson College Boat Club website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "server-tools": "./index.js"
+    "server-tools": "./index.js",
+    "tools": "./index.js"
   },
   "author": "Daniel Chatfield",
   "license": "Artistic 2.0",
