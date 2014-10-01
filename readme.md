@@ -6,4 +6,4 @@ To install, run this on the server:
 
 `npm install -g robinsoncollegeboatclub/server-tools`
 
-To use, SSH into the server and then run `server-tools`
+To use, SSH into the server and then run `tools`
