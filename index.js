@@ -10,8 +10,6 @@ var commands =  [
     'Close Server Tools'
 ];
 
-var shouldExecute = false;
-
 chooseCommand();
 
 function chooseCommand() {
@@ -39,9 +37,5 @@ function parseCommand(command) {
 
 function executeCommand(command) {
   console.log("Executing command: " + chalk.cyan(command));
-  if(shouldExecute) {
-    spawny(command, true, chooseCommand);
-  } else {
-    chooseCommand();
-  }
+  spawny(command, true, chooseCommand);
 }
