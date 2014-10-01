@@ -1,6 +1,6 @@
 {
   "name": "server-tools",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Command line utility for administering the Robinson College Boat Club website",
   "main": "index.js",
   "scripts": {

@@ -7,6 +7,7 @@ var chalk = require('chalk');
 
 var commands =  [
     'Restart apache',
+    'Update Server Tools',
     'Close Server Tools'
 ];
 
@@ -32,6 +33,10 @@ function parseCommand(command) {
 
   if(command == 'Restart apache') {
     executeCommand('service apache2 restart')
+  }
+
+  if(command == 'Update Server Tools') {
+    executeCommand('npm install -g robinsoncollegeboatclub/server-tools')
   }
 }
 
