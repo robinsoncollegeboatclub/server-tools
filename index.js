@@ -5,21 +5,37 @@ var inquirer = require("inquirer");
 var spawny = require("spawny");
 var chalk = require('chalk');
 
-var commands =  [
-    'Restart apache',
-    'Update Server Tools',
-    'Close Server Tools'
-];
+var commands =  {
+    'See Memory Usage': 'ps aux --sort -rss',
+    'Show Apache Logs': 'tail -f /var/log/apache2/error.log',
+    'Restart Apache': 'service apache2 restart',
+    'Restart MySQL': 'service mysql restart',
+    'sep': '',
+    'Update Server Tools': 'npm install -g robinsoncollegeboatclub/server-tools',
+    'Close Server Tools': 'echo "this should never be executed"'
+};
 
 chooseCommand();
 
 function chooseCommand() {
+  var choices = [];
+
+  for (var choice in commands) {
+    if (commands.hasOwnProperty(choice)) {
+      if(choice == 'sep') {
+        choices.push(new inquirer.Seperator());
+      } else {
+        choices.push(choice);
+      }
+    }
+  }
+
   inquirer.prompt([
     {
       type: 'list',
       name: 'command',
       message: 'What would you like to do?',
-      choices: commands
+      choices: choices
     }
   ], function(answers) {
     parseCommand(answers.command);
@@ -31,13 +47,7 @@ function parseCommand(command) {
     return;
   }
 
-  if(command == 'Restart apache') {
-    executeCommand('service apache2 restart')
-  }
-
-  if(command == 'Update Server Tools') {
-    executeCommand('npm install -g robinsoncollegeboatclub/server-tools')
-  }
+  executeCommand(commands[command]);
 }
 
 function executeCommand(command) {
