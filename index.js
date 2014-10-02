@@ -11,7 +11,7 @@ var commands =  {
     'Restart Apache': 'service apache2 restart',
     'Restart MySQL': 'service mysql restart',
     'sep': '',
-    'Update Server Tools': 'npm install -g robinsoncollegeboatclub/server-tools',
+    'Update Server Tools': 'npm install -g robinsoncollegeboatclub/server-tools --update',
     'Close Server Tools': 'echo "this should never be executed"'
 };
 
@@ -23,7 +23,7 @@ function chooseCommand() {
   for (var choice in commands) {
     if (commands.hasOwnProperty(choice)) {
       if(choice == 'sep') {
-        choices.push(new inquirer.Seperator());
+        choices.push(new inquirer.Separator());
       } else {
         choices.push(choice);
       }
