@@ -8,10 +8,12 @@ var chalk = require('chalk');
 var commands =  {
     'See Memory Usage': 'ps aux --sort -rss',
     'Show Apache Logs': 'tail -f /var/log/apache2/error.log',
-    'Restart Apache': 'service apache2 restart',
-    'Restart MySQL': 'service mysql restart',
+    'Install Server Updates': 'sudo unattended-upgrade',
+    'Restart Server': 'sudo restart',
+    'Restart Apache': 'sudo service apache2 restart',
+    'Restart MySQL': 'sudo service mysql restart',
     'sep': '',
-    'Update Server Tools': 'npm install -g robinsoncollegeboatclub/server-tools --update',
+    'Update Server Tools': 'sudo npm install -g robinsoncollegeboatclub/server-tools --update',
     'Close Server Tools': 'echo "this should never be executed"'
 };
 
