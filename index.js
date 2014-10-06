@@ -9,7 +9,7 @@ var commands =  {
     'See Memory Usage': 'ps aux --sort -rss',
     'Show Apache Logs': 'sudo tail -f /var/log/apache2/error.log',
     'Install Server Updates': 'sudo unattended-upgrade',
-    'Restart Server': 'sudo restart',
+    'Restart Server': 'sudo reboot',
     'Restart Apache': 'sudo service apache2 restart',
     'Restart MySQL': 'sudo service mysql restart',
     'sep': '',
