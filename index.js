@@ -7,7 +7,7 @@ var chalk = require('chalk');
 
 var commands =  {
     'See Memory Usage': 'ps aux --sort -rss',
-    'Show Apache Logs': 'tail -f /var/log/apache2/error.log',
+    'Show Apache Logs': 'sudo tail -f /var/log/apache2/error.log',
     'Install Server Updates': 'sudo unattended-upgrade',
     'Restart Server': 'sudo restart',
     'Restart Apache': 'sudo service apache2 restart',
