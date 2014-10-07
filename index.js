@@ -3,7 +3,6 @@
 var inquirer = require("inquirer");
 var spawny = require("spawny");
 var chalk = require('chalk');
-var nyanloader = require('nyanloader');
 
 var commands =  {
     'See Memory Usage': 'ps aux --sort -rss',
