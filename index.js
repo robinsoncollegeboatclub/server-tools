@@ -15,6 +15,7 @@ var commands =  {
     'sep': '',
     'Update Server Tools': 'sudo npm install -g robinsoncollegeboatclub/server-tools --update',
     'Close Server Tools': 'echo "this should never be executed"',
+    'sep': '',
     'Nyan': 'echo nyan'
 };
 
@@ -46,12 +47,12 @@ function chooseCommand() {
 }
 
 function parseCommand(command) {
-  if(command == 'Close Server Tools') {
+  if (command === 'Close Server Tools') {
     return;
   }
 
-  if(command == 'Nyan') {
-    nyanloader.start();
+  if (command === 'Nyan') {
+    //nyanloader.start();
     return;
   }
 
