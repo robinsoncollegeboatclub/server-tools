@@ -4,6 +4,7 @@
 var inquirer = require("inquirer");
 var spawny = require("spawny");
 var chalk = require('chalk');
+var nyanloader = require('nyanloader');
 
 var commands =  {
     'See Memory Usage': 'ps aux --sort -rss',
@@ -14,7 +15,9 @@ var commands =  {
     'Restart MySQL': 'sudo service mysql restart',
     'sep': '',
     'Update Server Tools': 'sudo npm install -g robinsoncollegeboatclub/server-tools --update',
-    'Close Server Tools': 'echo "this should never be executed"'
+    'Close Server Tools': 'echo "this should never be executed"',
+    'sep': '',
+    'Nyan': 'echo nyan'
 };
 
 chooseCommand();
@@ -46,6 +49,11 @@ function chooseCommand() {
 
 function parseCommand(command) {
   if(command == 'Close Server Tools') {
+    return;
+  }
+
+  if(command == 'Nyan') {
+    nyanloader.start();
     return;
   }
 

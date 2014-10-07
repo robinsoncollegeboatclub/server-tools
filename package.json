@@ -15,6 +15,7 @@
   "dependencies": {
     "chalk": "^0.5.1",
     "inquirer": "^0.8.0",
+    "nyanloader": "0.0.4",
     "spawny": "0.0.1"
   },
   "private": true
