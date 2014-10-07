@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-'use strict';
 
 var inquirer = require("inquirer");
 var spawny = require("spawny");
