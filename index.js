@@ -12,7 +12,7 @@ var commands =  {
     'Restart Apache': 'sudo service apache2 restart',
     'Restart MySQL': 'sudo service mysql restart',
     'sep': '',
-    'Force update theme': 'cd /var/www/wp-content/ && rm -r wordpress-theme && git clone https://github.com/robinsoncollegeboatclub/wordpress-theme && sudo chown -R www-data:www-data wordpress-theme',
+    'Force update theme': 'cd /var/www/wp-content/themes/ && rm -r wordpress-theme && git clone https://github.com/robinsoncollegeboatclub/wordpress-theme && sudo chown -R www-data:www-data wordpress-theme',
     'sep': '',
     'Update Server Tools': 'sudo npm install -g robinsoncollegeboatclub/server-tools --update',
     'Close Server Tools': 'echo "this should never be executed"',
