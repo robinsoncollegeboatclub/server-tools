@@ -14,8 +14,6 @@ var commands =  {
     'sep': '',
     'Update Server Tools': 'sudo npm install -g robinsoncollegeboatclub/server-tools --update',
     'Close Server Tools': 'echo "this should never be executed"',
-    'sep': '',
-    'Nyan': 'echo nyan'
 };
 
 chooseCommand();
